@@ -5088,3 +5088,252 @@ Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-04-19 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-19 22:01:35 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-19 23:00:23 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (3.0ms)
+  Rendered layouts/_headerlayout.html.erb (0.9ms)
+Completed 200 OK in 277ms (Views: 276.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/assets/naveen.jpeg" for 127.0.0.1 at 2015-04-19 23:00:24 -0700
+
+
+Started GET "/signup" for 127.0.0.1 at 2015-04-19 23:00:26 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (2.8ms)
+  Rendered users/new.html.erb within layouts/application (25.0ms)
+  Rendered layouts/_headerlayout.html.erb (0.2ms)
+Completed 200 OK in 115ms (Views: 105.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:27 -0700
+
+
+Started GET "/contact" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+Processing by MainController#contact as HTML
+  Rendered main/contact.erb within layouts/application (0.5ms)
+  Rendered layouts/_headerlayout.html.erb (0.2ms)
+Completed 200 OK in 81ms (Views: 80.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:28 -0700
+
+
+Started GET "/about" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+Processing by MainController#about as HTML
+  Rendered main/about.erb within layouts/application (0.7ms)
+  Rendered layouts/_headerlayout.html.erb (0.2ms)
+Completed 200 OK in 82ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-19 23:00:30 -0700

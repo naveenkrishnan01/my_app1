@@ -1,0 +1,11 @@
+<div class="center jumbotron">
+<h2>
+   Welcome to my Sample Home Page
+  <p> I have found great inspiration in learning Ruby on Rails after testing
+      some of the web app using Rspec/Capybara. Bootstrap has made a novice
+      life quite easy because it custom-made and reponsive nature of boootstarp 
+</h2>
+</div>
+<%=image_tag("naveen.jpeg",  :alt => "naveen image")%>
+  <br/>
+ <span>Naveen Krishnan</span>

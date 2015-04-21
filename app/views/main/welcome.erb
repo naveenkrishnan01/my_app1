@@ -8,6 +8,34 @@
       life quite easy because it custom-made and reponsive nature of boootstrap </p> 
 </h2>
 </div>
-<%=image_tag("naveen.jpeg",  :alt => "naveen image")%>
-  <br/>
- <span>Naveen Krishnan</span>
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="3000">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <%=image_tag("cars.jpeg", :alt => "car1")%>
+      <div class="carousel-caption">
+          <h3>Cool Exhaust Pipes</h3>
+      </div>
+    </div>
+    <div class="item">
+      <%=image_tag("car2.jpg", :alt => "car2")%>
+      <div class="carousel-caption">
+          <h3>Replacing headlights</h3>
+      </div>
+    </div>
+    <div class="item">
+      <%=image_tag("car3.jpg", :alt => "car3")%>
+      <div class="carousel-caption">
+          <h3>Cool Looking Cars</h3>
+      </div>
+    </div>
+  </div>
+</br>

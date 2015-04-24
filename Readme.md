@@ -14,16 +14,10 @@ origin	https://github.com/naveenkrishnan01/my_app1.git (push)
 
 ```bash
  heroku git:remote -a radiant-plains-6258
- Git remote heroku added
- ```
-
- ####Push to Heroku master
- 
- ```bash
  git push heroku master
- 
-```
- ####Asset precompile in local
+ ``` 
+
+ #### Asset precompile
 
 ```bash
 RAILS_ENV=development bundle exec rake assets:precompile

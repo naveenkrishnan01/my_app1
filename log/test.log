@@ -248,3 +248,90 @@ UserTest: test_email_validation
 UserTest: test_password_should_have_a_minimum_lengthc
 -----------------------------------------------------
   [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (57.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (247.5ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (68.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-04-23 03:38:11', '2015-04-23 03:38:11', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-04-23 03:38:11', '2015-04-23 03:38:11', 298486374)
+  [1m[36m (27.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-04-23 03:38:11.503427"], ["email", "test@example.com"], ["password_digest", "$2a$04$lCJ39nxMfcOA5/tp55iX7.TlIsQ0e0gFpfv8BpW8ddi1yQ1f7B9xe"], ["updated_at", "2015-04-23 03:38:11.503427"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-04-23 03:40:15', '2015-04-23 03:40:15', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-04-23 03:40:15', '2015-04-23 03:40:15', 298486374)
+  [1m[36m (30.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-04-23 03:42:46', '2015-04-23 03:42:46', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-04-23 03:42:46', '2015-04-23 03:42:46', 298486374)
+  [1m[36m (19.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-04-23 03:44:36', '2015-04-23 03:44:36', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-04-23 03:44:36', '2015-04-23 03:44:36', 298486374)
+  [1m[36m (25.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (64.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = '  ' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-04-23 03:44:36.936913"], ["email", "test@example.com"], ["password_digest", "$2a$04$l6x.TuedCR4W0DQ6xr4OGebblojCThbTIg/Izc4Z/d9iiPpTFbBdm"], ["updated_at", "2015-04-23 03:44:36.936913"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test@example.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test@example.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m

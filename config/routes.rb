@@ -4,5 +4,6 @@ Rails.application.routes.draw do
      get  '/contact' =>  'main#contact' 
      get  '/about'  => 'main#about'   
      get  'signup'  => 'users#new'
+     delete 'logout' => 'sessions#destroy'
      resources :users    
 end

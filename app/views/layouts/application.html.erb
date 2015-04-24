@@ -8,10 +8,15 @@
 </head>
 <body>
 
-<%= render 'layouts/headerlayout' %>
-
+<% if current_page?(root_path) || current_page?(signup_path) || current_page?(about_path) || current_page?(contact_path) %>
+   <%= render "layouts/homelayout" %>
+<% else %>
+   <%= render "layouts/headerlayout" %>
+<% end %>
+   
   <div class="container main-container" role="main">
  <%=yield %>
-  </div>
+     <%= render 'layouts/footerlayout' %>
+   </div>
 </body>
 </html>

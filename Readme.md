@@ -14,16 +14,16 @@ origin	https://github.com/naveenkrishnan01/my_app1.git (push)
 
 ```bash
  heroku git:remote -a radiant-plains-6258
- Git remote heroku added.
+ Git remote heroku added
  ```
 
- #### Push to Heroku master
+ ####Push to Heroku master
  
  ```bash
  git push heroku master
- ```
-
- #### Asset precompile in local
+ 
+```
+ ####Asset precompile in local
 
 ```bash
 RAILS_ENV=development bundle exec rake assets:precompile
@@ -34,4 +34,4 @@ git commit -m 'add assets'
 git push origin master
 ````
 
-### After pushing to git now push to heroku as shown from begining
+#### After pushing to git now push to heroku as shown from begining

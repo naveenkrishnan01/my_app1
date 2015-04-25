@@ -7,8 +7,11 @@ class UsersController < ApplicationController
      redirect_to '/about' 
     elsif (params[:id]) == 'signup'
      redirect_to '/signup' 
+     elsif (params[:id]) == 'logout'
+      redirect_to '/'  
     else 
-      @user = User.find(params[:id])
+      flash[:success] = "Welcome to my Sample App!"
+      @user = User.find(params[:id])     
     end
   end
 
@@ -19,7 +22,6 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
        if @user.save
-        flash[:success] = "Welcome to the Sample App!"
         redirect_to @user 
        else
         render 'new'
@@ -33,6 +35,11 @@ class UsersController < ApplicationController
   def about
     render_to '/about'
   end
+
+  def logout
+    redirect_to '/'
+  end  
+
    private
    def user_params
      params.require(:user).permit(:email, :password, :password_confirmation)

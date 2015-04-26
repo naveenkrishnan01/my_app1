@@ -11,4 +11,7 @@ class MainController < ApplicationController
   def signup
   end
 
+  def logout
+   redirect_to '/'
+  end
 end

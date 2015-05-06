@@ -335,3 +335,841 @@ UserTest: test_password_should_have_a_minimum_lengthc
   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
   [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'test@example.com' LIMIT 1
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (28.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (556.5ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying(255), "remember_digest" character varying(255)) 
+  [1m[36m (12.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (68.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (1.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (12.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150502050921')
+  [1m[36m (13.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150415045223')[0m
+  [1m[35m (13.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150415033700')
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (39.2ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 00:46:09', '2015-05-04 00:46:09', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 00:46:09', '2015-05-04 00:46:09', 298486374)
+  [1m[36m (15.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 00:47:12', '2015-05-04 00:47:12', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 00:47:12', '2015-05-04 00:47:12', 298486374)
+  [1m[36m (27.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.7ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (15.2ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 74ms (Views: 72.7ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 00:49:42', '2015-05-04 00:49:42', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 00:49:42', '2015-05-04 00:49:42', 298486374)
+  [1m[36m (15.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.6ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (15.3ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 71.5ms | ActiveRecord: 0.9ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (23.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (2.3ms)
+  Rendered layouts/_footerlayout.html.erb (0.2ms)
+Completed 200 OK in 33ms (Views: 6.5ms | ActiveRecord: 24.3ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 00:50:37', '2015-05-04 00:50:37', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 00:50:37', '2015-05-04 00:50:37', 298486374)
+  [1m[36m (18.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.6ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (15.2ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 71.8ms | ActiveRecord: 0.8ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"naveen@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'naveen@example.com' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.5ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 2.2ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 00:51:13', '2015-05-04 00:51:13', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 00:51:13', '2015-05-04 00:51:13', 298486374)
+  [1m[36m (18.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.5ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (15.2ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 71.9ms | ActiveRecord: 0.8ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"naveen@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'naveen@example.com' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.4ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 2.4ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 00:51:43', '2015-05-04 00:51:43', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 00:51:43', '2015-05-04 00:51:43', 298486374)
+  [1m[36m (26.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.6ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (15.1ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 72.0ms | ActiveRecord: 0.7ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"naveen@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'naveen@example.com' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.6ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 2.4ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 00:53:27', '2015-05-04 00:53:27', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 00:53:27', '2015-05-04 00:53:27', 298486374)
+  [1m[36m (10.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.6ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (15.1ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 75ms (Views: 73.5ms | ActiveRecord: 0.8ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.4ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 1.9ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.8ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 00:57:48', '2015-05-04 00:57:48', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 00:57:48', '2015-05-04 00:57:48', 298486374)
+  [1m[36m (17.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.6ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (15.3ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 0.8ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.4ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 2.1ms)
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (40.1ms)
+  Rendered layouts/_homelayout.html.erb (0.8ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 01:01:09', '2015-05-04 01:01:09', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 01:01:09', '2015-05-04 01:01:09', 298486374)
+  [1m[36m (22.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.6ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (15.3ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 72.1ms | ActiveRecord: 0.8ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.6ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 2.5ms)
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (4.8ms)
+  Rendered layouts/_homelayout.html.erb (0.8ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.8ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 01:15:17', '2015-05-04 01:15:17', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 01:15:17', '2015-05-04 01:15:17', 298486374)
+  [1m[36m (25.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 01:17:01', '2015-05-04 01:17:01', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('MyString', '2015-05-04 01:17:01', '2015-05-04 01:17:01', 298486374)
+  [1m[36m (15.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.8ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (16.6ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Naveen Example', 'naveen@example.com', '$2a$04$nEV51OkLIv.tzKij.vyJiec/kaOl9jtNSKABiM1c3N/.PfC4lAPv2', '2015-05-04 01:21:05', '2015-05-04 01:21:05', 363246660)[0m
+PG::UndefinedColumn: ERROR:  column "name" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("name", "email", "password_digest", "cr...
+                             ^
+: INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Naveen Example', 'naveen@example.com', '$2a$04$nEV51OkLIv.tzKij.vyJiec/kaOl9jtNSKABiM1c3N/.PfC4lAPv2', '2015-05-04 01:21:05', '2015-05-04 01:21:05', 363246660)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Naveen Example', 'naveen@example.com', '$2a$04$78Qapxr5Fyjyg/DJir1kNOFWXEC2ChBf/Yg9QG3NvO.pZwPU82lGq', '2015-05-04 01:21:05', '2015-05-04 01:21:05', 363246660)[0m
+PG::UndefinedColumn: ERROR:  column "name" of relation "users" does not exist
+LINE 1: INSERT INTO "users" ("name", "email", "password_digest", "cr...
+                             ^
+: INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Naveen Example', 'naveen@example.com', '$2a$04$78Qapxr5Fyjyg/DJir1kNOFWXEC2ChBf/Yg9QG3NvO.pZwPU82lGq', '2015-05-04 01:21:05', '2015-05-04 01:21:05', 363246660)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id") VALUES ('naveen@example.com', '$2a$04$Pla.NAyYd33H2ZVrfCYHO.1e4373Q0gTwVFoNl2V14xhh/fjOPv6y', '2015-05-04 01:22:12', '2015-05-04 01:22:12', 363246660)[0m
+  [1m[35m (160.0ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id") VALUES ('naveen@example.com', '$2a$04$ClmU01Q49rGPv5RYBYkFceAuKo/0PYOyIAuTpmyvy3UsUkjgf7NZm', '2015-05-04 01:22:43', '2015-05-04 01:22:43', 363246660)[0m
+  [1m[35m (16.9ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.5ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (14.2ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 71.2ms | ActiveRecord: 0.8ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.6ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 2.4ms)
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (4.8ms)
+  Rendered layouts/_homelayout.html.erb (0.8ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (2.0ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.8ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"naveen@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'naveen@example.com' LIMIT 1[0m
+Redirected to http://www.example.com/users/363246660
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id") VALUES ('naveen@example.com', '$2a$04$rmjX2TWe2qYySgppZbr.FeVobW3Qh5Vs1gR9ZlgFwImEDVHvpMBhi', '2015-05-04 01:28:11', '2015-05-04 01:28:11', 363246660)[0m
+  [1m[35m (29.2ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.5ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (14.3ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 71.3ms | ActiveRecord: 0.9ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.5ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 2.2ms)
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (4.8ms)
+  Rendered layouts/_homelayout.html.erb (0.7ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (2.1ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.8ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"naveen@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'naveen@example.com' LIMIT 1[0m
+Redirected to http://www.example.com/users/363246660
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id") VALUES ('naveen@example.com', '$2a$04$SsNNEEU2ZLpcuEm1UdGO.eCOdmV6TIJGgtKvqVMksI5wNvsuZLJWC', '2015-05-04 01:29:03', '2015-05-04 01:29:03', 363246660)[0m
+  [1m[35m (17.3ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.4ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (14.3ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 71.4ms | ActiveRecord: 0.7ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.5ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 2.3ms)
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (4.9ms)
+  Rendered layouts/_homelayout.html.erb (0.9ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (2.1ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.8ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"naveen@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'naveen@example.com' LIMIT 1[0m
+Redirected to http://www.example.com/users/363246660
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.8ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id") VALUES ('naveen@example.com', '$2a$04$.4oGrlQfR8tMe3sPSf8b2uYaNh.r7eMgZ6PxzgKWBtLL2Ge4KIbWe', '2015-05-04 01:29:50', '2015-05-04 01:29:50', 363246660)[0m
+  [1m[35m (22.8ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.5ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (14.4ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 71.3ms | ActiveRecord: 0.8ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.5ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 2.3ms)
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (4.9ms)
+  Rendered layouts/_homelayout.html.erb (0.9ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (2.0ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.8ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"naveen@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'naveen@example.com' LIMIT 1[0m
+Redirected to http://www.example.com/users/363246660
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"363246660"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 363246660]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 363246660 LIMIT 1[0m
+  Rendered layouts/_headerlayout.html.erb (2.2ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 1.6ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id") VALUES ('naveen@example.com', '$2a$04$jdFE16hUQ.Y8huNY3PB2A.Y0dNsp5s50mba/mGILgsIIp.O57xpz2', '2015-05-04 01:31:40', '2015-05-04 01:31:40', 363246660)[0m
+  [1m[35m (15.0ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.4ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (14.3ms)
+  Rendered layouts/_footerlayout.html.erb (0.5ms)
+Completed 200 OK in 72ms (Views: 71.3ms | ActiveRecord: 0.7ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.5ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 2.2ms)
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (4.6ms)
+  Rendered layouts/_homelayout.html.erb (0.8ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (2.6ms)
+  Rendered layouts/_footerlayout.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.8ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"naveen@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'naveen@example.com' LIMIT 1[0m
+Redirected to http://www.example.com/users/363246660
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"363246660"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 363246660]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 363246660 LIMIT 1[0m
+  Rendered layouts/_headerlayout.html.erb (2.0ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id") VALUES ('naveen@example.com', '$2a$04$Es/o8i0qSCGQV.8T3gOpqunkPS9IQd30xJzYbIOd/.D2nX7//emha', '2015-05-04 01:32:14', '2015-05-04 01:32:14', 363246660)[0m
+  [1m[35m (14.5ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.5ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (14.4ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 0.8ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.6ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 2.3ms)
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (4.7ms)
+  Rendered layouts/_homelayout.html.erb (0.8ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (2.3ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.6ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"naveen@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'naveen@example.com' LIMIT 1[0m
+Redirected to http://www.example.com/users/363246660
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"363246660"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 363246660]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 363246660 LIMIT 1[0m
+  Rendered layouts/_headerlayout.html.erb (2.0ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id") VALUES ('naveen@example.com', '$2a$04$nmUjPJrVhNoe9oKklXpsleGvMyNyuSWty9aRmFaafTZRm9fSBzwY2', '2015-05-04 01:33:45', '2015-05-04 01:33:45', 363246660)[0m
+  [1m[35m (26.3ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.5ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (14.2ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.7ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.5ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 2.3ms)
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (4.7ms)
+  Rendered layouts/_homelayout.html.erb (0.8ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (2.3ms)
+  Rendered layouts/_footerlayout.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.5ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"naveen@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'naveen@example.com' LIMIT 1[0m
+Redirected to http://www.example.com/users/363246660
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"363246660"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 363246660]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 363246660 LIMIT 1[0m
+  Rendered layouts/_headerlayout.html.erb (1.6ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id") VALUES ('naveen@example.com', '$2a$04$5sLSHgLc4cKG9kpdRUuAmujgQ1Qfhmgy6VqFs8yuyDPSrsJEiXyRW', '2015-05-04 01:34:50', '2015-05-04 01:34:50', 363246660)[0m
+  [1m[35m (28.8ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.6ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (14.2ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 71.4ms | ActiveRecord: 0.7ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.5ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 2.2ms)
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (5.0ms)
+  Rendered layouts/_homelayout.html.erb (0.8ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (2.0ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.8ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"naveen@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'naveen@example.com' LIMIT 1[0m
+Redirected to http://www.example.com/users/363246660
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"363246660"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 363246660]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 363246660 LIMIT 1[0m
+  Rendered layouts/_headerlayout.html.erb (2.0ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id") VALUES ('naveen@example.com', '$2a$04$Bj.yVcRXDL8PPlAQ3zJDleZGqpMqQCmGV1T6/R0J5tB6JuwbPnQZe', '2015-05-04 01:37:53', '2015-05-04 01:37:53', 363246660)[0m
+  [1m[35m (20.2ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.4ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (14.2ms)
+  Rendered layouts/_footerlayout.html.erb (0.5ms)
+Completed 200 OK in 72ms (Views: 71.2ms | ActiveRecord: 0.7ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.5ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 2.2ms)
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (4.9ms)
+  Rendered layouts/_homelayout.html.erb (0.7ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.6ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.4ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"naveen@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'naveen@example.com' LIMIT 1[0m
+Redirected to http://www.example.com/users/363246660
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"363246660"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 363246660]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 363246660 LIMIT 1[0m
+  Rendered layouts/_headerlayout.html.erb (2.1ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id") VALUES ('naveen@example.com', '$2a$04$3Rulg3gsLqvJZ/hQ9moXs.pPULNt6jH/a3yrYqrAev9Lycr7tlII2', '2015-05-04 01:38:38', '2015-05-04 01:38:38', 363246660)[0m
+  [1m[35m (26.4ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.4ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (14.4ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 75ms (Views: 73.4ms | ActiveRecord: 0.8ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.4ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 2.2ms)
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (5.3ms)
+  Rendered layouts/_homelayout.html.erb (0.8ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (2.5ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.9ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"naveen@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'naveen@example.com' LIMIT 1[0m
+Redirected to http://www.example.com/users/363246660
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"363246660"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 363246660]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 363246660 LIMIT 1[0m
+  Rendered layouts/_headerlayout.html.erb (2.3ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 1.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id") VALUES ('naveen@example.com', '$2a$04$VWn.9WKhTPlK6l76kR40bOz/SwYuc3x/51Ia73GMeURUIKmd4qGM.', '2015-05-04 01:39:00', '2015-05-04 01:39:00', 363246660)[0m
+  [1m[35m (29.4ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.4ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (14.8ms)
+  Rendered layouts/_footerlayout.html.erb (0.9ms)
+Completed 200 OK in 77ms (Views: 75.4ms | ActiveRecord: 0.7ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.4ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 2.2ms)
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (4.9ms)
+  Rendered layouts/_homelayout.html.erb (0.8ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (2.3ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.9ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"naveen@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'naveen@example.com' LIMIT 1[0m
+Redirected to http://www.example.com/users/363246660
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"363246660"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 363246660]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 363246660 LIMIT 1[0m
+  Rendered layouts/_headerlayout.html.erb (2.2ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id") VALUES ('naveen@example.com', '$2a$04$WFezV8fI9adJqWKfkM7tU.wj3W6.T0ML9jo3o0cHSgvB/fN2jHqx2', '2015-05-04 01:39:11', '2015-05-04 01:39:11', 363246660)[0m
+  [1m[35m (16.4ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (12.4ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (14.3ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 75ms (Views: 73.5ms | ActiveRecord: 0.7ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = '' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (1.6ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 2.2ms)
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (4.7ms)
+  Rendered layouts/_homelayout.html.erb (0.8ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 363246660]]
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_headerlayout.html.erb (2.3ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.8ms)
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"naveen@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'naveen@example.com' LIMIT 1[0m
+Redirected to http://www.example.com/users/363246660
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"363246660"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 363246660]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 363246660 LIMIT 1[0m
+  Rendered layouts/_headerlayout.html.erb (2.4ms)
+  Rendered layouts/_footerlayout.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK

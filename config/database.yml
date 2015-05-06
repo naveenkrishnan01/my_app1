@@ -4,7 +4,7 @@ development:
   database: databasename
   pool: 5
   username: think
-  password: 
+  password:  
 
 test:
   adapter: postgresql

@@ -10,3 +10,9 @@ $(document).ready(function() {
     $("#panel").slideToggle("slow");
    });
    });
+
+$(document).ready(function() {
+   $("#flipimage").click(function(){
+    $("#panelimage").slideToggle("slow");
+   });
+   });

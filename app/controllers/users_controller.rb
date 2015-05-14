@@ -11,7 +11,8 @@ class UsersController < ApplicationController
       redirect_to '/'  
     else 
       flash.now[:success] = "Welcome to my Sample App!"
-      @user = User.find(params[:id])     
+      @user = User.find(params[:id])
+      UserMailer.welcome_email(@user).deliver     
     end
   end
 
@@ -24,7 +25,7 @@ class UsersController < ApplicationController
        if @user.save
          log_in @user 
         flash.now[:success] = "Welcome to Sample App!"
-        redirect_to @user 
+        redirect_to @user         
        else
         render 'new'
        end

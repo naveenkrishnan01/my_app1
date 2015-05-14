@@ -92,14 +92,14 @@ footer ul li {
 }
 
 /* contact-us form */
-#panel, #flip {
+#panel, #flip, #flipimage, #panelimage {
     padding: 5px;
     text-align: center;
     background-color: #e5eecc;
     border: solid 1px #c3c3c3;
 }
 
-#panel {
+#panel, #panelimage {
     padding: 50px;
     display: none;
 }

@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt'
 gem 'rails_12factor'
+gem 'sidekiq'
 
 group :doc do
    gem 'sdoc', '~> 0.4.0'

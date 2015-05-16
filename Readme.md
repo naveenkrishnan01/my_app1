@@ -17,7 +17,7 @@ origin	https://github.com/naveenkrishnan01/my_app1.git (push)
  git push heroku master
  ``` 
 
- #### Asset precompile
+#### Asset precompile
 
 ```bash
 RAILS_ENV=development bundle exec rake assets:precompile

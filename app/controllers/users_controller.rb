@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       flash.now[:success] = "Welcome to my Sample App!"
       @user = User.find(params[:id])
      # UserMailer.welcome_email(@user).deliver  This is used when not using sidekia but immediate response for web request
-      UserMailer.delay_until(2.minute.from_now).welcome_email(@user)   
+      UserMailer.delay_until(1.minute.from_now).welcome_email(@user)   
     end
   end
 

@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 
     validates :email, presence: true, length: { maximum: 25}, uniqueness: true
  #   validates :email, format: {with: /<regular expression>/ }
-    validates :password, length: {minimum: 6}
+    validates :password, length: {minimum: 6}, allow_nil: true
     has_secure_password 
 
 def User.digest(string)

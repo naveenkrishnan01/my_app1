@@ -8,5 +8,6 @@ Rails.application.routes.draw do
      post 'login'   => 'sessions#create'
      get  '/logout' =>  'main#logout'
      delete 'logout' => 'sessions#destroy'
+     match 'auth/twitter/callback', to: 'sessions#twittercreate', via: [:get, :post]
      resources :users    
 end

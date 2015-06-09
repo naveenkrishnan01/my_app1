@@ -35,3 +35,8 @@ For delayed process of email use redis and sidekiq
 Install redis on the machine and start redis-server
 Next install sidekiq gem and then run bundle exec side-kiq
 ```
+
+```bash
+ Consumer Key (API Key) rJLGYnEkF19ACDtTGBvbEpRYb
+Consumer Secret (API Secret) n2r7iy3XUZibXiIVrk4WMZvYGAHVdh2NDaqANNxW5YU94gchy0 
+````

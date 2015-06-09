@@ -10,6 +10,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'bcrypt'
 gem 'rails_12factor'
 gem 'sidekiq'
+gem 'omniauth-twitter'
+gem 'pry'
 
 group :doc do
    gem 'sdoc', '~> 0.4.0'

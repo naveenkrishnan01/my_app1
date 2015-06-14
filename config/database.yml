@@ -12,4 +12,13 @@ test:
   database: testdatabasename
   pool: 5
   username: think
-  password: 
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: testdatabasename
+  pool: 5
+  username: think
+  password:
+ 

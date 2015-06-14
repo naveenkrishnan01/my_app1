@@ -8,7 +8,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 gem 'sidekiq'
 gem 'omniauth-twitter'
 gem 'pry'

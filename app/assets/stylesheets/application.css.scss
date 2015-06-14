@@ -16,7 +16,7 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+@import "magnific-popup";
 
 section {
   overflow: auto;
@@ -33,4 +33,20 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
+
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+    padding: 0;
+}
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+    top: 0;
+    bottom: 0;
+}
+/* padding for main container */
+
+.mfp-no-margins .mfp-container {
+    padding: 0;
+}
+ 
 

@@ -12,6 +12,7 @@ gem 'rails_12factor'
 gem 'sidekiq'
 gem 'omniauth-twitter'
 gem 'pry'
+gem 'magnific-popup-rails'
 
 group :doc do
    gem 'sdoc', '~> 0.4.0'

@@ -15,12 +15,15 @@ gem 'pry'
 gem 'magnific-popup-rails'
 
 group :doc do
-   gem 'sdoc', '~> 0.4.0'
+  gem 'sdoc', '~> 0.4.0'
 end
 
 group :development do
-gem 'spring'
+  gem 'spring'
 end
 
-
+group :production do
+  gem 'rails_log_stdout', github: 'heroku/rails_log_stdout'
+  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+end
 

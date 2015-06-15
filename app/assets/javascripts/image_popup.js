@@ -1,5 +1,5 @@
 jQuery(function($){
-     $('#thumbnail').each(function() {
+     $('#col-xs-6 col-md-3').each(function() {
       $(this).magnificPopup({
         type: 'image',
         closeOnContentClick: false,

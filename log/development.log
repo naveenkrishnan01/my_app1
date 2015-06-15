@@ -12078,3 +12078,354 @@ Started GET "/assets/twitter.jpeg" for 127.0.0.1 at 2015-06-14 14:13:58 -0700
 
 
 Started GET "/assets/cat2.jpg" for 127.0.0.1 at 2015-06-14 14:13:58 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/assets/lexus.jpeg" for 127.0.0.1 at 2015-06-14 23:13:58 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-14 23:15:30 -0700
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (0.9ms)
+  Rendered layouts/_homelayout.html.erb (0.2ms)
+  Rendered layouts/_footerlayout.html.erb (0.0ms)
+Completed 200 OK in 241ms (Views: 240.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/twitter_session.css?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/image_popup.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/twitter_session.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/magnific-popup/index.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/magnific-popup/jquery.magnific-popup.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/cars.jpeg" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/car2.jpg" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/bike.jpg" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/car3.jpg" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/lexus2.jpeg" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/cat2.jpg" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/twitter.jpeg" for 127.0.0.1 at 2015-06-14 23:15:31 -0700
+
+
+Started GET "/assets/lexus.jpeg" for 127.0.0.1 at 2015-06-14 23:24:16 -0700
+
+
+Started GET "/assets/lexus.jpeg" for 127.0.0.1 at 2015-06-14 23:24:33 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-14 23:24:38 -0700
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (1.2ms)
+  Rendered layouts/_homelayout.html.erb (0.2ms)
+  Rendered layouts/_footerlayout.html.erb (0.1ms)
+Completed 200 OK in 500ms (Views: 500.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/twitter_session.css?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/image_popup.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/twitter_session.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/magnific-popup/jquery.magnific-popup.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/magnific-popup/index.js?body=1" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/cars.jpeg" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/car3.jpg" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/lexus2.jpeg" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/car2.jpg" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/cat2.jpg" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/bike.jpg" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/assets/twitter.jpeg" for 127.0.0.1 at 2015-06-14 23:24:39 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-14 23:25:25 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#welcome as HTML
+  Rendered main/welcome.erb within layouts/application (17.3ms)
+  Rendered layouts/_homelayout.html.erb (0.7ms)
+  Rendered layouts/_footerlayout.html.erb (0.4ms)
+Completed 200 OK in 670ms (Views: 670.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/twitter_session.css?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/color.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/image_popup.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/twitter_session.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/magnific-popup/index.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/magnific-popup/jquery.magnific-popup.js?body=1" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/cars.jpeg" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/car2.jpg" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/car3.jpg" for 127.0.0.1 at 2015-06-14 23:25:26 -0700
+
+
+Started GET "/assets/lexus.jpeg" for 127.0.0.1 at 2015-06-14 23:25:27 -0700
+
+
+Started GET "/assets/cat2.jpg" for 127.0.0.1 at 2015-06-14 23:25:27 -0700
+
+
+Started GET "/assets/bike.jpg" for 127.0.0.1 at 2015-06-14 23:25:27 -0700
+
+
+Started GET "/assets/twitter.jpeg" for 127.0.0.1 at 2015-06-14 23:25:27 -0700
+
+
+Started GET "/assets/lexus2.jpeg" for 127.0.0.1 at 2015-06-14 23:25:27 -0700
+
+
+Started GET "/assets/lexus.jpeg" for 127.0.0.1 at 2015-06-14 23:25:33 -0700
+
+
+Started GET "/assets/lexus2.jpeg" for 127.0.0.1 at 2015-06-14 23:25:40 -0700
+
+
+Started GET "/assets/bike.jpg" for 127.0.0.1 at 2015-06-14 23:25:44 -0700
+
+
+Started GET "/assets/cat2.jpg" for 127.0.0.1 at 2015-06-14 23:25:50 -0700
+
+
+Started GET "/assets/lexus2.jpeg" for 127.0.0.1 at 2015-06-14 23:27:01 -0700

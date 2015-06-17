@@ -12,7 +12,7 @@ gem 'bcrypt'
 gem 'sidekiq'
 gem 'omniauth-twitter'
 gem 'pry'
-gem 'magnific-popup-rails'
+#gem 'magnific-popup-rails'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 group :doc do

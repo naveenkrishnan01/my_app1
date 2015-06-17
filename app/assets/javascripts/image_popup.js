@@ -1,3 +1,4 @@
+/*
 jQuery(function($){
      $('#col-xs-6 col-md-3').each(function() {
       $(this).magnificPopup({
@@ -16,4 +17,5 @@ jQuery(function($){
         }
        }); 
     }); 
-});  
+});
+*/  

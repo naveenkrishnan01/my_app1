@@ -14,6 +14,7 @@ gem 'omniauth-twitter'
 gem 'pry'
 #gem 'magnific-popup-rails'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'jquery-validation-rails'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'

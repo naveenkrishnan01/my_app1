@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
     root               "main#welcome"
      get  '/'     =>     'main#home' 
-     get  '/contact' =>  'main#contact' 
+     get  '/contact' =>  'main#contact'
+     post '/contact'    =>     'main#create'   
      get  '/about'  => 'main#about'   
      get  'signup'  => 'users#new'
      get  'login'   => 'sessions#new'

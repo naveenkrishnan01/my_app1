@@ -11,9 +11,11 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
+// require jquery_ujs
 //= require_tree .
 //= require bootstrap-sprockets
+//= require jquery.validate
+//= require jquery.validate.additional-methods 
 // require magnific-popup
 
 

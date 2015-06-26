@@ -104,6 +104,25 @@ footer ul li {
     display: none;
 }
 
+    label.valid {
+    width: 24px;
+    height: 24px;
+    background: url(assets/img/valid.png) center center no-repeat;
+    display: inline-block;
+    text-indent: -9999px;
+    }
+    label.error {
+    font-weight: bold;
+    color: #cd5c5c;
+    padding: 2px 8px;
+    margin-top: 2px;
+    }
+
+    .bigicon {
+        font-size: 35px;
+        color: #36A0FF;
+    }
+
 .modal {width:600px;}
 .thumbnail img {width:120px;}
 

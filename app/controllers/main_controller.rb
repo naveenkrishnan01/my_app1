@@ -14,4 +14,8 @@ class MainController < ApplicationController
   def logout
    redirect_to '/'
   end
+
+  def create
+   redirect_to '/'
+  end  
 end

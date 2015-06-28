@@ -20,13 +20,15 @@
     required: true
     }
     },
-    highlight: function(element) {
-    $(element).closest('.control-group').removeClass('success').addClass('error');
-    },
-    success: function(element) {
-    element
-    .text('This field valid').addClass('valid')
-    .closest('.control-group').removeClass('error').addClass('success');
-    }
-    });
-    }); // end document.ready
+    highlight: function(label) {
+$(label).closest(".control-group").removeClass("success").addClass("error");
+},
+success: function(label) {
+$(label)
+.text("Invalid field name").addClass("valid")
+.closest(".control-group").removeClass("error").addClass("success");
+}
+});
+});
+
+
